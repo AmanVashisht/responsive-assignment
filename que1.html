@@ -1,0 +1,75 @@
+<!-- Let,s assume you have been given a task to build a responsive webpage with a navigation menu that adapts to different screen sizes. Initially, on large screens, the webpage should have a horizontal menu that has several navigation items. It looks good on large screens, but on smaller screens, it should change into a menu icon (like a hamburger) and collapse. The below images will provide a clear picture of the task -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav-left{
+            max-width: 50px;
+            max-height: 50px;
+            margin: 10px 20px;
+        }
+        .nav-left img{
+            max-width: 40px;
+            max-height: 40px;
+        }
+        .nav-center{
+            padding: 22px;
+        }
+        .nav-center a{
+            color: #fff;
+            text-decoration: none;
+            padding:  10px 20px;
+            margin-top: 10px;
+        }
+        .nav-right button{
+            color: #fff;
+            background-color: #2469c2;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 40px;
+            margin: 13px 25px;
+        }
+        .nav .nav-menu {
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+        @media (max-width: 615px) {
+            .nav-center,
+            .nav-right{
+                display: none;
+            }
+            .nav-menu{
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <img src="https://cdn.logo.com/hotlink-ok/logo-social-sq.png" alt="logo">
+        </div>
+        <div class="nav-center">
+            <a href="">Home</a><a href="">Blog</a><a href="">About</a><a href="">Contact</a>
+        </div>
+        <div class="nav-right">
+            <button>Login</button>
+        </div>
+        <div class="nav-menu">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+        </div>
+    </div>
+</body>
+</html>

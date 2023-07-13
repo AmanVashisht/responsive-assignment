@@ -1,0 +1,181 @@
+<!-- In this coding challenge, your task is to create an information section for the previously built OneCard 0ebpage clone, focusing on the different modes like dark and light modes. The 0ebpage should look different depending on the screen size: dark mode for larger screens and light mode for smaller devices. The reference images are attached below. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav-left{
+            max-width: 50px;
+            max-height: 50px;
+            margin: 10px 20px;
+        }
+        .nav-left img{
+            max-width: 40px;
+            max-height: 40px;
+        }
+        .nav-center{
+            padding: 22px;
+        }
+        .nav-center a{
+            color: #fff;
+            text-decoration: none;
+            padding:  10px 20px;
+            margin-top: 10px;
+        }
+        .nav-right button{
+            color: #fff;
+            background-color: #2469c2;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 40px;
+            margin: 13px 25px;
+        }
+        .nav .nav-menu {
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+        @media (max-width: 615px) {
+            .nav-center,
+            .nav-right{
+                display: none;
+            }
+            .nav-menu{
+                display: block;
+            }
+        }
+
+        /* ////////////////////////////////////////////////////////// */
+        .main{
+            display: flex;
+        }
+        .main-left{
+            width: 50%;
+            padding: 40px;
+        }
+        .main-left h3{
+            padding-top: 40px;
+            font-size: 25px;
+        }
+        .main-left h1{
+            color: #1792da;
+            font-size: 40px;
+        }
+        .main-left .blue-para{
+            color: #1792da;
+
+        }
+        .main-left img{
+            max-width: 50%;
+            margin: 20px 0px;
+        }
+        .main-right{
+            width: 50%;
+            padding: 40px;
+        }
+        .main-right video{
+            max-width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 615px) {
+            .main{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .main-left h3{
+                padding-top: 10px;
+                font-size: 25px;
+            }
+            .main-right{
+                width: 50%;
+                padding: 0px;
+            }
+            .main-right video{
+                max-width: 100%;
+                height: 50vh;
+                margin-left: 20px;
+                text-align: center;
+            }
+        }
+        /* ////////////////////////////////////////////////////////// */
+
+        .footer{
+            background-color: #1f1f1f;
+            margin-top: -10px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        .footer h1{
+            color: #2469c2;
+            font-size: 40px;
+            text-align: center;
+        }
+        .footer p{
+            font-size: 25px;
+            color: #fff;
+            text-align: center;
+        }
+        @media (max-width: 615px) {
+            .footer{
+                background-color: #fff;
+            }
+            .footer p{
+                font-size: 25px;
+                color: #000;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <img src="https://cdn.logo.com/hotlink-ok/logo-social-sq.png" alt="logo">
+        </div>
+        <div class="nav-center">
+            <a href="">Home</a><a href="">Blog</a><a href="">About</a><a href="">Contact</a>
+        </div>
+        <div class="nav-right">
+            <button>Login</button>
+        </div>
+        <div class="nav-menu">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-left">
+            <h3>Say Hi To</h3>
+            <h1>One Card</h1>
+            <p class="blue-para">Co-branded Card issuer:</p>
+            <img src="https://www.getonecard.app/images/legal/Banking_partners_24thJan_dark__.png" alt="image">
+            <p>
+                India's best metal credit card. Built with full-stack tech. Backed by
+                the principles of simplicity, transparency, and giving back control to
+                the user.
+            </p>
+        </div>
+        <div class="main-right">
+            <video loop autoplay controls src="https://www.getonecard.app/images/say_hi_2x_d3_.mp4"></video>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h1>No Hidden Fees Ever</h1>
+        <p>No Joining Fees.</p>
+        <p>No Annual Fees.</p>
+        <p>No Rewards Redemption Fees.</p>
+    </div>
+</body>
+</html>
